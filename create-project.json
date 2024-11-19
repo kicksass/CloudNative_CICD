@@ -1,0 +1,17 @@
+{
+  "name":"st10-codebuild-demo-project-cli",
+    "source": {
+      "type": "S3",
+      "location": "ktds-st10/CodeBuild/input/MesssageUtil.zip"
+    },
+    "artifacts": {
+      "type": "S3",
+      "location": "ktds-st10"
+    },
+    "environment": {
+      "type": "LINUX_CONTAINER",
+      "image": "aws/codebuild/amazonlinux2-x86_64-standard:corretto11",
+      "computeType": "BUILD_GENERAL1_SMALL"
+    },
+    "serviceRole": "arn:aws:iam::879772956301:role/st10-CodeBuildServiceRole"
+    }
